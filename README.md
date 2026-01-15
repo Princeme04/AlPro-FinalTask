@@ -1,11 +1,19 @@
 # 🧠⚙️ Programming Algorithm
 
 
-![Image](https://github.com/user-attachments/assets/487ddf74-3c79-4f83-9ce0-2584cd39370e)
+
+<img src="https://github.com/user-attachments/assets/487ddf74-3c79-4f83-9ce0-2584cd39370e" width="300"/>
+
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
+![GitHub repo size](https://img.shields.io/github/repo-size/Princeme04/AlPro-FinalTask)
+![GitHub last commit](https://img.shields.io/github/last-commit/Princeme04/AlPro-FinalTask)
+![GitHub top language](https://img.shields.io/github/languages/top/Princeme04/AlPro-FinalTask)
+![License](https://img.shields.io/github/license/Princeme04/AlPro-FinalTask)
 ## 🌐 Binary Search Tree and Dijkstra Algorithm
 
 This repository contains the **final group project (UAS)** for the  
-**Algoritma dan Pemrograman (AlPro)** course.
+**Algoritma Pemrograman** course.
 
 ![Image](https://github.com/user-attachments/assets/5e350be0-415d-44f2-a718-86fdcf32ffdc)
 
