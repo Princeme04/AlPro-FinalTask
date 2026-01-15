@@ -1,9 +1,10 @@
 graph = {
-    'A': {'B': 7, 'E': 1},
-    'B': {'A': 7, 'C': 3, 'E': 8},
-    'C': {'B': 3, 'E': 2, 'D': 6},
-    'D': {'C': 6, 'E': 7},
-    'E': {'A': 1, 'B': 8, 'C': 2, 'D': 7}
+    'A': {'B': 1, 'C': 2},
+    'B': {'A': 1, 'D': 4, 'E': 5},
+    'C': {'A': 2, 'E': 3, 'D': 2},
+    'D': {'B': 4, 'C': 2, 'F': 1},
+    'E': {'B': 5, 'C': 3, 'F': 3},
+    'F': {'D': 1, 'E': 3},
 }
 
 
@@ -33,7 +34,11 @@ def dijkstra(graph, start):
         visited[current] = 1
 
         # 2. relax all edges from current
+        # 2. relax all edges from current
         for neighbor, weight in graph[current].items():
+            if visited[neighbor]:
+                continue
+
             new_dist = dist[current] + weight
             if new_dist < dist[neighbor]:
                 dist[neighbor] = new_dist
@@ -73,5 +78,5 @@ if __name__ == "__main__":
     dist, prev, visited = dijkstra(graph, 'A')
     print_table(dist, prev, visited)
 
-    path = build_path(prev, 'A', 'D')
+    path = build_path(prev, 'A', 'F')
     print("\nShortest path A -> D:", path)
