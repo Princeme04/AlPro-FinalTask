@@ -1,11 +1,13 @@
 # 🧠⚙️ Programming Algorithm
 
-![Image](https://github.com/user-attachments/assets/0190028c-3d98-4c75-b73c-5470a8f71f2d)
 
+![Image](https://github.com/user-attachments/assets/487ddf74-3c79-4f83-9ce0-2584cd39370e)
 ## 🌐 Binary Search Tree and Dijkstra Algorithm
 
 This repository contains the **final group project (UAS)** for the  
 **Algoritma dan Pemrograman (AlPro)** course.
+
+![Image](https://github.com/user-attachments/assets/5e350be0-415d-44f2-a718-86fdcf32ffdc)
 
 The project focuses on the implementation, explanation, and comparison of two fundamental data structures and algorithms:
 
@@ -18,11 +20,51 @@ The goal of this project is not only to make the algorithms work, but to demonst
 
 ## 🎯 Project Objectives
 
-- 🧩 Implement a **Binary Search Tree** with standard operations
-- 🧭 Implement **Dijkstra’s Algorithm** to find the shortest path in a weighted graph
-- ⏱️ Analyze **time and space complexity**
-- 🧠 Apply algorithmic thinking and structured programming principles
+- 🧩 Implement a **Binary Search Tree** with standard operations  
+- 🧭 Implement **Dijkstra’s Algorithm** to find the shortest path in a weighted graph  
+- ⏱️ Analyze **time and space complexity**  
+- 🧠 Apply algorithmic thinking and structured programming principles  
 - 🤝 Practice teamwork and version control using **Git/GitHub**
+
+---
+
+## 🌳 Binary Search Tree (BST)
+
+A **Binary Search Tree (BST)** is a hierarchical data structure in which each node has at most two children and follows a strict ordering rule:
+
+- Values in the **left subtree** are smaller than the parent node  
+- Values in the **right subtree** are greater than the parent node  
+
+This property allows efficient searching, insertion, and deletion operations.
+
+### ⚙️ Key Characteristics
+
+- Tree-based data structure  
+- Maintains data in **sorted order**  
+- Average time complexity: **O(log n)**  
+- Worst-case time complexity: **O(n)** (when the tree becomes unbalanced)
+
+### 🔍 Supported Operations
+
+- Insertion of nodes  
+- Searching for a value  
+- Deletion of nodes  
+- Tree traversal:
+  - Inorder  
+  - Preorder  
+  - Postorder  
+
+### 🌍 Applications
+
+- Searching and indexing data  
+- Implementing ordered sets and maps  
+- Database indexing  
+- Expression parsing  
+
+### ⚠️ Limitations
+
+- Performance degrades if the tree becomes **unbalanced**  
+- Requires balancing techniques (e.g., **AVL Tree**, **Red-Black Tree**) for guaranteed efficiency  
 
 ---
 
@@ -32,27 +74,27 @@ The goal of this project is not only to make the algorithms work, but to demonst
 
 ### ⚙️ Key Characteristics
 
-- Greedy algorithm
-- Uses priority queue (or array) to select the nearest unvisited node
-- Guarantees optimal shortest path
+- Greedy algorithm  
+- Uses a priority queue (or array) to select the nearest unvisited node  
+- Guarantees optimal shortest path  
 
 ### 🌍 Applications
 
-- Network routing
-- GPS and navigation systems
-- Transportation and logistics
+- Network routing  
+- GPS and navigation systems  
+- Transportation and logistics  
 
 ### ⚠️ Limitations
 
-- Does not work with negative edge weights
+- Does not work with negative edge weights  
 
 ---
 
 ## 🧰 Technologies Used
 
-- 💻 Programming Language: *(C / C++ / Java / Python)*
-- 🛠️ Development Tools: Git, GitHub
-- 🖥️ Platform: Console-based application
+- 💻 Programming Language: *(C / C++ / Java / Python)*  
+- 🛠️ Development Tools: Git, GitHub  
+- 🖥️ Platform: Console-based application  
 
 ---
 
