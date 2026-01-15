@@ -1,0 +1,77 @@
+graph = {
+    'A': {'B': 7, 'E': 1},
+    'B': {'A': 7, 'C': 3, 'E': 8},
+    'C': {'B': 3, 'E': 2, 'D': 6},
+    'D': {'C': 6, 'E': 7},
+    'E': {'A': 1, 'B': 8, 'C': 2, 'D': 7}
+}
+
+
+def dijkstra(graph, start):
+    dist = {node: float('inf') for node in graph}
+    prev = {node: None for node in graph}
+    visited = {node: 0 for node in graph}
+
+    dist[start] = 0
+    unvisited = set(graph.keys())
+
+    step = 0
+
+    while unvisited:
+        # 1. pick unvisited node with smallest current distance
+        current = min(unvisited, key=lambda node: dist[node])
+        if dist[current] == float('inf'):
+            break
+
+        print(f"\nStep {step}:")
+        print(f"  Current node : {current}")
+        print(f"  Distances    : {dist}")
+        print(f"  Visited flags: {visited}")
+        print(f"  Unvisited    : {unvisited}")
+        step += 1
+
+        visited[current] = 1
+
+        # 2. relax all edges from current
+        for neighbor, weight in graph[current].items():
+            new_dist = dist[current] + weight
+            if new_dist < dist[neighbor]:
+                dist[neighbor] = new_dist
+                prev[neighbor] = current
+
+        # 3. done with current
+        unvisited.discard(current)
+
+    return dist, prev, visited
+
+
+def build_path(prev, start, end):
+    path = []
+    node = end
+    while node is not None:
+        path.append(node)
+        node = prev[node]
+    path.reverse()
+    if not path or path[0] != start:
+        return None
+    return path
+
+
+def print_table(dist, prev, visited):
+    print("\nFinal table:")
+    print("Node | Vis | Dist | Prev")
+    print("-------------------------")
+    for node in sorted(dist.keys()):
+        vis = visited[node]
+        d = dist[node]
+        d_str = d if d != float('inf') else "-"
+        p = prev[node] if prev[node] is not None else "-"
+        print(f"  {node}   |  {vis}  |  {d_str:4} |  {p}")
+
+
+if __name__ == "__main__":
+    dist, prev, visited = dijkstra(graph, 'A')
+    print_table(dist, prev, visited)
+
+    path = build_path(prev, 'A', 'D')
+    print("\nShortest path A -> D:", path)
