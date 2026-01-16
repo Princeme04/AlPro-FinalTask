@@ -100,7 +100,7 @@ This property allows efficient searching, insertion, and deletion operations.
 
 ## 🧰 Technologies Used
 
-- 💻 Programming Language: *(C / C++ / Java / Python)*  
+- 💻 Programming Language: *(Python)*  
 - 🛠️ Development Tools: Git, GitHub  
 - 🖥️ Platform: Console-based application  
 
