@@ -45,6 +45,28 @@ A **Binary Search Tree (BST)** is a hierarchical data structure in which each no
 
 This property allows efficient searching, insertion, and deletion operations.
 
+### Implementation
+
+        --- BST Menu ---
+        1. Insert value
+        2. Insert multiple values
+        3. Display tree
+        4. Clear tree
+        5. Back to main menu
+        Choose option (1-5): 2
+        Enter values separated by space: 23 24 51 16 7 6 8
+        Values inserted successfully!
+        
+        Current tree:    
+             23     
+            /  \    
+          16    24   
+         /        \  
+        7         51  
+       / \          
+      6   8  
+
+
 ### ⚙️ Key Characteristics
 
 - Tree-based data structure  
@@ -79,6 +101,78 @@ This property allows efficient searching, insertion, and deletion operations.
 ## 🛣️ Dijkstra Algorithm
 
 **Dijkstra’s Algorithm** is used to find the **shortest path** from a starting node to all other nodes in a weighted graph with **non-negative edge weights**.
+
+### Implementation
+Table show how dijkstra flow from node A to D
+    
+    Available nodes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    Enter start node: a
+    Enter end node: d
+    
+    Step 0:
+      Current node : A
+      Distances    : {'A': 0, 'B': inf, 'C': inf, 'D': inf, 'E': inf, 'F': inf, 'G': inf, 'H': inf}
+      Visited flags: {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0}
+      Unvisited    : {'H', 'E', 'B', 'A', 'C', 'D', 'F', 'G'}
+    
+    Step 1:
+      Current node : B
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': inf, 'E': inf, 'F': inf, 'G': 1, 'H': inf}
+      Visited flags: {'A': 1, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0}
+      Unvisited    : {'H', 'E', 'B', 'C', 'D', 'F', 'G'}
+    
+    Step 2:
+      Current node : G
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 5, 'E': 6, 'F': inf, 'G': 1, 'H': inf}
+      Visited flags: {'A': 1, 'B': 1, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0}
+      Unvisited    : {'H', 'E', 'C', 'D', 'F', 'G'}
+    
+    Step 3:
+      Current node : H
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 5, 'E': 6, 'F': inf, 'G': 1, 'H': 2}
+      Visited flags: {'A': 1, 'B': 1, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 1, 'H': 0}
+      Unvisited    : {'H', 'E', 'C', 'D', 'F'}
+    
+    Step 4:
+      Current node : C
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 5, 'E': 6, 'F': 3, 'G': 1, 'H': 2}
+      Visited flags: {'A': 1, 'B': 1, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 1, 'H': 1}
+      Unvisited    : {'E', 'C', 'D', 'F'}
+    
+    Step 5:
+      Current node : F
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 4, 'E': 5, 'F': 3, 'G': 1, 'H': 2}
+      Visited flags: {'A': 1, 'B': 1, 'C': 1, 'D': 0, 'E': 0, 'F': 0, 'G': 1, 'H': 1}
+      Unvisited    : {'E', 'D', 'F'}
+    
+    Step 6:
+      Current node : D
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 4, 'E': 5, 'F': 3, 'G': 1, 'H': 2}
+      Visited flags: {'A': 1, 'B': 1, 'C': 1, 'D': 0, 'E': 0, 'F': 1, 'G': 1, 'H': 1}
+      Unvisited    : {'E', 'D'}
+    
+    Step 7:
+      Current node : E
+      Distances    : {'A': 0, 'B': 1, 'C': 2, 'D': 4, 'E': 5, 'F': 3, 'G': 1, 'H': 2}
+      Visited flags: {'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 0, 'F': 1, 'G': 1, 'H': 1}
+      Unvisited    : {'E'}
+      
+Table:
+
+    Node | Vis | Dist | Prev
+    -------------------------
+      A   |  1  |     0 |  -
+      B   |  1  |     1 |  A
+      C   |  1  |     2 |  A
+      D   |  1  |     4 |  C
+      E   |  1  |     5 |  C
+      F   |  1  |     3 |  H
+      G   |  1  |     1 |  A
+      H   |  1  |     2 |  G
+Summary:
+
+    Shortest path A -> D: ['A', 'C', 'D']
+    Total distance: 4
 
 ### ⚙️ Key Characteristics
 
